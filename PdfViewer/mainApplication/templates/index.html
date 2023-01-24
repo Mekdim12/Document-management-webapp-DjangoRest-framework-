@@ -1,0 +1,51 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+
+{% block content %}
+{% include 'baseSideBar.html' %}
+   
+
+<div class="rightPanelCardConatainer">
+      
+      
+<div class="topBarOfRightPanelForSearch ">
+    <div class="searchFooter">
+      <input
+      id="searchright"
+        type="text"
+        class="searchTerm"
+        placeholder="What are you looking for?"
+        oninput="searchValue()"
+      />
+      <button type="submit" class="searchButton2" onclick="searchValue()">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+  
+
+ 
+<div class="wrap-work">
+  
+  <div id="columns" class="grid-container">
+  
+
+
+  </div>
+</div>
+
+  
+    
+      
+      
+
+  <!--  ---------------------- footer --------------------------- -->
+  {% include 'baseFootbar.html' %}
+
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,1385 @@
+
+body {
+    font-family: Arial;
+    margin: 0px;
+    padding: 0px;
+  }
+a{
+  text-decoration: none;
+  color: black;
+ 
+}
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+  }
+  
+  .header h1 {
+    font-size: 50px;
+  }
+  
+  /* Style the top navigation bar */
+  .topnav {
+    margin-top: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    border-color: 2px solid red;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .topnav .logo {
+    height: 25px;
+  }
+  .tern_logo_2018 {
+    width: 30px;
+    height: 30px;
+  }
+  .main_display{
+    margin-top: 80px;
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .search-container {
+    position: relative;
+    display: inline-block;
+    margin: 4px 2px;
+    height: 50px;
+    width: 50px;
+    vertical-align: bottom;
+  }
+  
+  .mglass {
+    display: inline-block;
+    pointer-events: none;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+  }
+  
+  .searchbutton {
+    position: absolute;
+    font-size: 22px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .search:focus + .searchbutton {
+    transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s; 
+    color: black;
+  }
+  .search {
+    position: absolute;
+    left: 49px; /* Button width-1px (Not 50px/100% because that will sometimes show a 1px line between the search box and button) */
+    background-color: white;
+    outline: none;
+    border: none;
+    padding: 0;
+    width: 0;
+    height: 100%;
+    z-index: 10;
+    transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+  }
+  
+  .search:focus {
+    width: 363px; /* Bar width+1px */
+    padding: 0 16px 0 0;
+    border:1px solid #4c9e9e;
+    border-radius: 6px;
+  }
+  
+  .expandright {
+    left: auto;
+    right: 49px; /* Button width-1px */
+  }
+  
+  .expandright:focus {
+    padding: 0 0 0 16px;
+  }
+  .grid-container {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); */
+  
+    gap: 1px;
+    /* background-color: #c3cacf; */
+    padding: 1px;
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 1px 0;
+    /* font-size: 30px; */
+  }
+  
+  .item1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  img {
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .container {
+    padding: 2px 16px;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: white;
+    padding: 2px;
+    margin-top: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  footer {
+    width: 100%;
+    height: 100vh;
+    background-color: #383b3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container_footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.7fr 0.1fr 1.7fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "top-left top-left top-right top-right"
+      "middleLiner middleLiner middleLiner middleLiner"
+      "bottom-Left bottom-Left bottom-right bottom-right";
+  
+    width: 980px;
+    height: inherit;
+    background-color: #383b3d;
+  }
+  
+  .top-left_footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: ".";
+    grid-area: top-left;
+  }
+  
+  .top-right_footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: ".";
+    grid-area: top-right;
+  }
+  
+  .middleLiner_footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: ".";
+    grid-area: middleLiner;
+    width: 100%;
+    height: 1px;
+  }
+  
+  .bottom-Left_footer {
+    grid-area: bottom-Left;
+    color: #fff;
+  }
+  
+  .bottom-right_footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: ".";
+    grid-area: bottom-right;
+  }
+  
+  .topleftinsider_footer,
+  .toprightinsider_footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  
+  }
+  
+  .topleftinsider_footer img{
+    width: 257px;
+    height: 23px;
+  }
+  .toprightinsider_footer h6 span{
+    width: 142.75px;
+    height: 24px;
+  }
+  
+  
+  .mpGTIt {
+    list-style-type: none;
+    height: 25px;
+   
+  }
+  .mpGTIt ul{
+    margin-block-start:0px;
+    padding: 0px;
+  }
+  
+  
+  .WzbAF8 ul li {
+    float: left;
+    padding: 10px;
+   
+  }
+  
+  
+  
+  .ternlogofooter img{
+    margin: 10px;
+  }
+  
+  .pUnTVX input{
+    width: 100%;
+    height: 51px;
+    padding: 3px 3px 3px 12px;
+    background-color: #FBF3F300;
+    border: 1px solid #FBF3F300;
+    border-bottom-color:#FF5B2F ;
+    margin: 5px ;
+  }
+  
+  
+  
+  
+  .pUnTVX input{
+    width: 100%;
+    height: 51px;
+    padding: 3px 3px 3px 12px;
+    background-color: #FBF3F300;
+    border: 1px solid #FBF3F300;
+    border-bottom-color:#FF5B2F ;
+    margin: 5px ;
+    color:#FFF
+    
+  }
+  
+  
+  
+  
+  
+  .textarea_holder_footer{
+    margin: 25px 0px 5px 0px;
+    width: 100%;
+   
+  }
+  
+  .textarea_holder_footer textarea{
+    padding: 12px 10px 3px 10px;
+    width: 100%;
+    height: 219px;
+    resize: none;
+    background-color: #FBF3F300 ;
+    border: 1px solid #FF5B2F ;
+    color:#FFF
+  }
+  
+  .pUnTVX input:focus{
+    background-color: #FBF3F300;
+    border-bottom: 1px solid #FF5B2F ;
+    outline: none;
+  }
+  
+  
+  
+  
+  .textarea_holder_footer textarea:focus{
+    background-color: #FBF3F300;
+    border-bottom: 1px solid #FF5B2F ;
+    outline: none;
+  }
+  
+  .submitButtonHolder{
+    display: flex;
+    justify-content: flex-end;
+    
+  }
+  .submitButtonHolder button{
+    width: 119px;
+    height: 41px;
+    background-color:inherit;
+    
+    border: 1px solid #AAAAAA;
+    
+   
+  
+  }
+  
+  .submitButtonHolder button span{
+    color: #AAAAAA;
+  
+  }
+  
+  .description{
+     padding: 15px;
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  
+  }
+  
+  
+  .menu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .firsteftLogo{
+    padding-left: 15px;
+  }
+  
+  
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn,
+    .rightcolumn {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
+  
+  @media screen and (min-width: 2001px) {
+    .wrap-work {
+      display: flex;
+      justify-content: center;
+      
+      /* background-color: #c3cacf; */
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(auto, 2fr));
+      /* background-color: #c3cacf; */
+      padding: 1px;
+    }
+  }
+  
+  @media screen and (max-width: 2000px) and (min-width: 1701px) {
+    .wrap-work {
+      display: flex;
+      justify-content: center;
+      /* background-color: #c3cacf; */
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto ;
+      /* gap: 50px; */
+      /* background-color: #c3cacf; */
+      padding: 1px;
+    }
+  }
+  
+  @media screen and (max-width: 1700px) and (min-width: 1401px) {
+    .wrap-work {
+      display: flex;
+      justify-content: center;
+      
+      background-color: rgba(245, 245, 245, 0.827);
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto ;
+      /* gap: 50px; */
+      /* background-color: #c3cacf; */
+      /* margin: 50px; */
+      padding: 1px;
+    }
+  }
+  
+  
+  @media screen and (max-width: 1400px) and (min-width: 1201px) {
+    .wrap-work {
+      display: flex;
+      justify-content: center;
+      /* background-color: #c3cacf; */
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      /* background-color: #c3cacf; */
+      padding: 1px;
+    }
+  }
+  
+  
+  @media screen and (max-width: 1200px) and (min-width: 1001px) {
+    .wrap-work {
+      display: flex;
+      justify-content: center;
+     
+      /* background-color: #c3cacf; */
+    }
+  
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto ;
+      gap: 25px;
+      /* background-color: #c3cacf; */
+      padding: 1px;
+    }
+  
+    .sideBarContainer{
+      width :30% !important;
+    }
+  
+    .rightPanelCardConatainer{
+      width: 70% !important;
+    }
+  }
+  
+  
+  
+  
+  @media screen and (max-width: 1000px) and (min-width: 700px) {
+    .wrap-work {
+      display: flex;
+      justify-content: center;
+      /* background-color: #c3cacf; */
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap:5px;
+      /* background-color: #c3cacf; */
+      padding: 1px;
+    }
+    .sideBarContainer{
+      width :30% !important;
+    }
+  
+    .rightPanelCardConatainer{
+      width: 70% !important;
+    }
+    
+  }
+  
+  @media screen and (max-width: 700px) {
+    .wrap-work {
+      display: flex;
+      justify-content: center;
+      /* background-color: #c3cacf; */
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto;
+      gap: 5px;
+      /* background-color: #c3cacf; */
+      padding: 1px;
+    }
+  
+    .sideBarContainer{
+      width :50% !important;
+    }
+  
+    .rightPanelCardConatainer{
+      width: 50% !important;
+    }
+  
+  
+  }
+  
+  @media screen and (max-width:640px) {
+    .wrap-work {
+      display: flex;
+      justify-content: center;
+      /* background-color: #c3cacf; */
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto;
+      gap: 25px;
+      /* background-color: #c3cacf; */
+      padding: 1px;
+    }
+  
+    .sideBarContainer{
+      width :40% !important;
+    }
+  
+    .rightPanelCardConatainer{
+      width: 60% !important;
+    }
+  
+  
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  @media screen and (max-width: 1050px) and (min-width: 1000px){
+    .pUnTVX input{
+      width: 95%;
+    }
+  
+    .textarea_holder_footer textarea{
+      width: 95%;
+    }
+  }
+  
+  
+  @media screen and (max-width: 1000px) and (min-width: 600px){
+    .pUnTVX input{
+      width: 80%;
+    }
+  
+    .textarea_holder_footer textarea{
+      width: 80%;
+    }
+    .submitButtonHolder{
+      justify-content: center;
+    }
+  }
+  
+
+
+* {
+    margin: 0;
+  
+    padding: 0;
+  
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: cursive;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  li {
+    list-style: none;
+  }
+  /* NAVBAR STYLING STARTS */
+  
+  .navbar {
+    /* overflow: hidden; */
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between; 
+    z-index: 999; display: flex; 
+    background-color: #fff; 
+    color: #000;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+     /* margin-bottom: 100px; */
+     height: 70px;
+  }
+  
+  .nav-links a {
+    color: #000;
+  }
+  
+  /* LOGO */
+  
+  .navbar .logo {
+    font-size: 25px; 
+    height: 20px;
+  }
+  
+  /* NAVBAR MENU */
+  
+  .menu {
+    display: flex;
+  
+    gap: 1em;
+  
+    font-size: 18px;
+  }
+  
+  .menu li{
+    font-size: 0.9em;
+  }
+  .menu li a:hover {
+    border-radius: 6px;
+    /* background-color: #4c9e9e; */
+    color: #FF5B2F !important;
+    
+    transition: 0.3s ease;
+  }
+  
+  .menu li {
+    padding: 5px 14px;
+  }
+  /*RESPONSIVE NAVBAR MENU STARTS*/
+  
+  /* CHECKBOX HACK */
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  /*HAMBURGER MENU*/
+  
+  .hamburger {
+    display: none;
+  
+    font-size: 24px;
+  
+    user-select: none;
+  }
+  
+  .active{
+    color: #FF5B2F !important;
+  }
+  .menu li:hover{
+    color: #FF5B2F !important ;
+  }
+
+
+
+
+
+
+
+
+  /* APPLYING MEDIA QUERIES */
+  @media (max-width: 768px) {
+  
+    .menu { 
+    
+    display:none;
+    
+    position: absolute;
+    
+    background-color:#eee;
+    
+    
+    right: 0;
+    
+    left: 0;
+    
+    text-align: center;
+    
+    padding: 16px 0;
+    
+    }
+    .middleeLogo{
+      display: none;
+    }
+    
+    .menu li:hover {
+
+    
+    transition: 0.3s ease;
+    
+    }
+    
+    .menu li + li {
+    
+    margin-top: 12px;
+    
+    }
+    
+    input[type=checkbox]:checked ~ .menu{
+    
+    display: block;
+    
+    }
+    
+    .hamburger {
+    
+    display: block;
+    margin-right: 25px;
+    padding: 10px;
+    
+    }
+    .hamburger:hover {
+  
+      color: red;
+      }
+    
+    }
+
+
+
+
+
+
+    
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+body{
+    overflow: hidden;
+     background-color: rgba(245, 245, 245, 0.827) !important;
+     font-family: 'Ubuntu Condensed', sans-serif !important;
+}
+.sideBarContainer{
+    display: inline-block;
+    width: 20%;
+    height: 90.6vh;
+    border: 1px solid rgba(135, 130, 130, 0.175);
+    margin-top: 68px;
+    position: fixed;
+}
+
+
+
+.sideBarContainer{
+    background-color: white !important;
+    font-family: 'Trebuchet MS' !important;
+
+}
+
+.rightPanelCardConatainer{
+    /* margin-top: 78px; */
+    width: 80%;
+    height: 100vh;
+
+    
+    /* background-color:#c3cacf ; */
+    background-color: white !important;
+    background-color: rgba(245, 245, 245, 0.827) !important;
+ 
+    overflow-y: scroll;
+    overflow-x: hidden;
+    float: right;
+}
+
+.topOfSideBarContainer{
+    padding: 10px;
+}
+.closeButtonHolder{
+    padding: 5px;
+    margin-left: 5px;
+    float: right;
+    width: 28px;
+}
+
+.closeButtonHolder>img:hover{
+    width: 28.6px;
+}
+.sideBarContents{
+    padding: 5px;
+   display: inline-block;
+   margin-left: 5px;
+}
+
+
+.BottomOfSideBarContainer{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 38px;
+   
+}
+
+.force-overflow{
+    height: 80vh;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+
+
+.searchFooter {
+    width: 100%;
+    /* height: 500px; */
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 50px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color: #00B4CC;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: inherit;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+
+  .searchButton2 {
+    width: 40px;
+    height: 50px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /*Resize the wrap to see the search bar change!*/
+  .wrapFooter{
+    width: 100%;
+    height: 38px;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+  #style-1::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color:inherit
+}
+
+#style-1::-webkit-scrollbar
+{
+	width: 12px;
+	background-color:inherit;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+
+.scrollbar{
+	
+	float: left;
+	height: 75vh;
+	width:98%;
+	background: inherit;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+    padding-left: 5%;
+    padding-right: 5%;
+    overflow-x: hidden;
+
+}
+
+.sideBarContainerCardHover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.sideBarContainerCardHover:hover{
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+}
+
+.bookIconHolderasButton{
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.bookIconHolderasButton:hover{
+    box-shadow: rgba(0, 0, 0, 0.903) 0px 22px 70px 4px;
+}
+.topBarOfRightPanelForSearch{
+    width: 50%;
+    margin-top: 78px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(245, 245, 245, 0.827);
+ 
+
+}
+.cardContainer{
+    width: 300px;
+    height: 350px;
+    margin: 10px;
+    background-color: #eee;
+   
+    border: 1px solid #E7E8D1; 
+    border-radius: 25px;
+    box-shadow: #E7E8D1 0px 5px 15px;
+
+}
+
+
+
+.cardContainer:hover{
+
+    transform: translateY(-0.6rem);
+
+
+}
+
+.cardHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+   
+}
+
+
+.cardPdfHolder{
+    overflow: hidden;
+    margin: 10px;
+    border: #9DBFAF solid 2px;
+    border-radius: 15px;
+}
+
+.descriptionHolder{
+    /* /* display: flex; */
+    justify-content: center;
+    /* align-items: center; */ 
+    padding: 10px;
+}
+
+.descriptionHolder > p {
+    text-align: justify;
+}
+
+.CatagoryHolder{
+    padding: 10px;
+}
+.carDescription{
+    overflow: auto;
+}
+.carDescription{
+    max-width: 20rem;
+  display: -webkit-box;
+-webkit-line-clamp:3;
+ -webkit-box-orient: vertical;
+ overflow: hidden;
+ color: black !important;
+
+}
+.mainDisplayTittleHolder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainPdfDisplayHolder {
+    /* display: flex; */
+    width: 100%;
+    height: 95vh;
+    padding-left: 7%;
+    padding-right: 7%;
+    
+}
+
+
+
+.mainPdfDisplay{
+  width: 100% !important;
+  height: 90vh !important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.modalContainer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color:rgba(0, 0, 0, 0.477);
+  z-index: 1001;
+  overflow: auto;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+.secondModalConfirmation{
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 75px;
+  margin-right: 25px;
+  height: 50px;
+  width: 250px;
+  background-color:inherit;
+  z-index: 1550;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+  transition: 2s ease-out;
+  
+}
+.secondModalAdapteralignerHolder_1,.secondModalAdapteralignerHolder_2,.secondModalAdapteralignerHolder_3{
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.forUpdatedText{
+  outline: none;
+  border: #00cc70dc 1px solid;
+  background-color: #00cc7078;
+}
+
+.fordeletedText{
+  outline: none;
+  border: #e40505ed 1px solid;
+  background-color: #e0070774;
+}
+
+.visibiltyHanderofthesecondModal{
+  display: none;
+}
+
+#fortoggleingtheSecondmodalitemUpdate,#fortoggleingtheSecondmodalitemDelete,#fortoggleingtheSecondmodalitemAdded{
+  display: none;
+}
+
+
+.displayManagerOfModal{
+  display: none;
+}
+
+.modalContentContainer{
+  width: 50%;
+  height: 85%;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 48px;
+}
+ .modalHeader{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+  height: 54px;
+ }
+
+ .modalBody_1,.modalBody_2{
+  margin-top: 40px;
+ }
+
+
+ 
+
+
+
+.modalAdditemButton{
+  width: 168px;
+  height: 40px;
+  padding: 13px 12px ;
+  border-radius: 5px;
+  color: white;
+  background-color: #00B4CC;
+  float:  right;
+  border: none;
+  margin: 0px 15px;
+  font-weight: bold;
+}
+
+
+.modalLabel,.modlaInput,.modalFileUploader{
+  display: block;
+}
+
+.modalLabel{
+  margin: 5px 10%;
+  margin-bottom: 1px;
+  padding: 6px;
+  padding-left: 0px;
+  
+}
+.modlaInput{
+  width: 80%;
+  margin: 5px auto;
+  margin-bottom: 10px;
+  line-height: 2.3;
+  font-size: 0.8em;
+  padding: 2px;
+}
+
+
+
+.modalTextarea{
+  width: 80%;
+  margin: 5px 10%;
+  resize: none;
+  padding: 4px;
+  padding-top:6px;
+  
+}
+
+.inpuFileHolder{
+  width: inherit;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.modalFileUploader{
+  width: 80%;
+  text-align: center;
+  margin: 5px auto;
+  color: red;
+  background-color: rgba(221, 221, 221, 0.266);
+}
+.submitModalButtonHolder{
+  width: inherit;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+ 
+}
+
+.savebtnmodal{
+  width: 250px;
+  height: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  color: white;
+  background-color: #00B4CC;
+  border: none;
+  border-radius: 10px;
+ }
+
+ .modalBody_2{
+  overflow-y: auto;
+  height: inherit;
+  
+  margin: 15px 8px;
+ }
+
+
+ .cardBodymodalHolder{
+  margin:10px 7px;
+  padding: 7px;
+  background-color: #eaebe17d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   
+ }
+ .cardBodymodalHolder:hover{
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+ 
+ }
+
+.modalItemContextHolder{
+  display: inline-block;
+  width: 75%;
+  height: 48px;
+ 
+}
+
+.CardBodyModalFunctionalityButtonHolder{
+  display: flex;
+  align-items: center; 
+  width:25% ;
+  float: right;
+  height: 48px;
+}
+
+.tittleHoldermadal{
+  line-height: 2;
+}
+.editButtonHolderModal,.DeleteButtonHolderModal{
+  width: 50%;
+  display: inline-block;
+  margin: 0 5px;
+}
+.DeleteButtonHolderModal{
+  float: right;
+}
+.DeleteButtonHolderModal button,.editButtonHolderModal button{
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 25px; 
+}
+
+.DeleteButtonHolderModal button:hover,.editButtonHolderModal button:hover{
+  background-color: #ddAAAAAA;
+}
+
+.catagoryHoldermodal{
+  color: #AAAAAA;
+}
+
+
+.modalCloseButton{
+  border-radius: 5px;
+  border: none;
+  margin: 0px 15px;
+  background-color: inherit;
+}
+
+.imgModalCloseBtn{
+  border-radius: 80%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.imgModalCloseBtn:hover{
+  background-color: #AAAAAA;
+  cursor: pointer;
+}
+
+#managePdfModalOpener{
+  cursor: pointer;
+
+}
+
+.modalToggler,.modalToggler_2{
+  display: none;
+}
+
+
+.modalBackButton {
+  width: 68px;
+  height: 40px;
+  padding: 13px 12px ;
+  border-radius: 5px;
+  color: white;
+  background-color: #00B4CC;
+  float:  right;
+  border: none;
+  margin: 0px 15px;
+  font-weight: bold;
+  display: none;
+}
+
+
+.modalAdditemButton:hover,.modalBackButton:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.EditIteminModal:hover{
+  cursor: pointer;
+}

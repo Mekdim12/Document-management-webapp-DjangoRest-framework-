@@ -1,0 +1,6 @@
+PdfViewer/pdfApi/__pycache__/
+PdfViewer/pdfApi/migrations/
+PdfViewer/PdfViewer/__pycache__/
+PdfViewer/mainApplication/__pycache__/
+PdfViewer/media/files/
+virtual_env/

@@ -1,0 +1,110 @@
+<div class="modalContainer displayManagerOfModal">
+  <div class="modalContentContainer">
+    <div class="modalHeader">
+      
+      <button class="modalAdditemButton">&plus; Add Item</button>
+      <button class="modalBackButton">Back</button>
+      <div class="modalcloseButtonHolder">
+        <button class="modalCloseButton "><img class="imgModalCloseBtn"src="https://img.icons8.com/ios-glyphs/30/null/macos-close.png"/></button>
+      </div>
+    </div>
+
+    <div class="modalBody_1 modalToggler">
+            
+            <form id="addingAnItem">
+                {% csrf_token %}
+                <label for="pdfTittle" class="modalLabel">Document Tittle</label>
+                <input type="text" name="tittle" id="pdfTittle" class="modlaInput pdfTittleInsert" placeholder="Tittle">
+                <label for="pdfCatagory" class="modalLabel">Document Catagory</label>
+                <input type="text" name="catagory" id="pdfCatagory"class="modlaInput pdfCatagoryInsert"  placeholder="Catagory">
+
+                <label for="pdfDescription" class="modalLabel">Document Description</label>
+                <textarea name="description" id="pdfDescription" class="modalTextarea pdfDescriptionInsert"cols="30" placeholder="Description" rows="10"></textarea>
+
+                <label for="pdfFile" class="modalLabel">Upload the Document </label>
+                <div class="inpuFileHolder">
+                    <input type="file" id="pdfFile" name="pdfFile"  class="modalFileUploader pdfFileInsert" accept="application/pdf">
+                </div>
+                
+                <div class="submitModalButtonHolder">
+                    <button type="button" class="savebtnmodal"> Save </button>
+                </div>
+                
+             </form>
+    </div>
+
+    <div class="modalBody_2" id="style-1">
+
+      <!-- <div class="cardBodymodalHolder">
+
+        <div class="modalItemContextHolder">
+          <div class="tittleHoldermadal"><strong>Tittle:</strong>  Lorem</div>
+          <div class="catagoryHoldermodal"><strong>Catagory:</strong> lorem</div>
+        </div>
+
+        <div class="CardBodyModalFunctionalityButtonHolder">
+          <div class="editButtonHolderModal">
+            </a><button class="EditIteminModal"><img src="https://img.icons8.com/material-outlined/24/null/pencil--v2.png"/></button>
+          </div>
+          <div class="DeleteButtonHolderModal">
+            <button class="DeleteItemInModal"><img src="https://img.icons8.com/material-rounded/24/null/delete-forever.png"/></button>
+          </div>
+        </div>
+        
+      </div> -->
+
+    </div>
+
+    <div class="modalBody_3 modalToggler_2">
+            
+      <form id="updatingInformation">
+        {% csrf_token %}
+          <label for="pdfTittle" class="modalLabel">Document Tittle</label>
+          <input type="text" name="tittle " id="pdfTittle " class="modlaInput pdfTittleEdit" placeholder="Tittle">
+          <label for="pdfCatagory" class="modalLabel">Document Catagory</label>
+          <input type="text" name="catagory " id="pdfCatagory"class="modlaInput pdfCatagoryEdit"  placeholder="Catagory">
+
+          <label for="pdfDescription" class="modalLabel">Document Description</label>
+          <textarea name="description " id="pdfDescription" class="modalTextarea pdfDescriptionEdit" cols="30" placeholder="Description" rows="10"></textarea>
+
+          <label for="pdfFile" class="modalLabel">Upload the Document </label>
+          <div class="inpuFileHolder">
+              <input type="file" id="pdfFile" name="pdfFile"  class="modalFileUploader modalFileUploaderEdit" accept="application/pdf">
+          </div>
+          
+          <div class="submitModalButtonHolder">
+              <button type="button" class="Updatebtnmodal"> Update </button>
+          </div>
+      </form>
+    </div>
+
+  </div>
+  
+
+  
+
+</div>
+<!--  forUpdatedText     fordeletedText -->
+
+
+<div class="secondModalConfirmation visibiltyHanderofthesecondModal ">
+
+  <div class="secondModalAdapteralignerHolder_1" id="fortoggleingtheSecondmodalitemUpdate">
+    <img src="https://img.icons8.com/color/26/null/checked--v1.png"/> &nbsp;&nbsp;<p class="CurrentText ">Item Updated</p>
+  </div>
+
+  <div class="secondModalAdapteralignerHolder_2" id="fortoggleingtheSecondmodalitemDelete">
+    <img src="https://img.icons8.com/ios-glyphs/26/null/delete-forever.png"/> &nbsp;&nbsp;<p class="CurrentText "> Item Deleted</p>
+  </div>
+
+  <div class="secondModalAdapteralignerHolder_3" id="fortoggleingtheSecondmodalitemAdded">
+    <img   src="https://img.icons8.com/office/25/null/plus--v1.png"/> &nbsp;&nbsp;<p class="CurrentText ">Item Added</p>
+  </div>
+
+</div>
+
+
+
+
+
+

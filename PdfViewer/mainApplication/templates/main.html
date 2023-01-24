@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>pdf viewer</title>
+    <link
+      rel="icon"
+      href="src/includes/images/Tern_logo_2018.webp"
+      type="image/icon"
+    />
+    <link rel="stylesheet" type="text/css" href="{% static 'style/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'style/style.scss' %}" />
+   
+  
+
+    <!--  for font awesom for the icons used  -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <!-- <link
+      rel="stylesheet"
+      type="text/css"
+      href="src/includes/css/styles2.css"
+    /> -->
+  </head>
+
+  <body>
+    <!-----------------------------  navigatoion  bar  ------------------------->
+    {% include 'baseHeader.html' %}
+   
+    <!----------------------------side bar -------------------------------------->
+
+    {% include 'modalComponent.html' %}
+
+
+
+
+    <!-- for the main conent to be inserted here-->
+    
+   
+
+
+
+    
+    <!-- for the footer -->
+    {% block content%}
+    
+   
+    {% endblock %}
+
+   
+    <div class="floatingButtonForTabeOfContetn" style="display: none">
+      <div
+        class="bookIconHolderasButton"
+        style="display: flex; justify-content: center; align-items: center"
+      >
+        <button
+          style="background-color: inherit; border: none"
+          class="sideBarOpener"
+        >
+          <img src="https://img.icons8.com/emoji/48/null/books-emoji.png" />
+        </button>
+      </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="{% static 'script/script.js' %}"></script>
+  </body>
+</html>
